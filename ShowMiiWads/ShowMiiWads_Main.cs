@@ -3988,8 +3988,7 @@ namespace ShowMiiWads
 						string part2 = mes.Remove(mes.LastIndexOf('<')).Remove(0, mes.IndexOf('>') + 1);
 						string part3 = mes.Remove(0, mes.LastIndexOf('>') + 1);
 
-						if (
-							MessageBox.Show(part1 + "\r\n" + part2 + "\r\n" + part3, Messages[65], MessageBoxButtons.YesNo,
+						if ( MessageBox.Show(part1 + "\r\n" + part2 + "\r\n" + part3, Messages[65], MessageBoxButtons.YesNo,
 								MessageBoxIcon.Information) == DialogResult.Yes)
 						{
 							SaveFileDialog sfd = new SaveFileDialog();
