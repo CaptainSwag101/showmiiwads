@@ -28,7 +28,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ShowMiiWads")]
-[assembly: AssemblyCopyright("Copyright © Leathl 2009")]
+[assembly: AssemblyCopyright("Copyright © Leathl 2009-2010, CaptainSwag101 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

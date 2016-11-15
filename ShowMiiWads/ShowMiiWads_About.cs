@@ -15,13 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+using System;
 using System.Windows.Forms;
 
 namespace ShowMiiWads
 {
     public partial class ShowMiiWads_About : Form
     {
-        public bool x64 = false;
         private Timer t1 = new Timer();
 
         public ShowMiiWads_About()
@@ -43,19 +43,20 @@ namespace ShowMiiWads
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://showmiiwads.googlecode.com/");
+            System.Diagnostics.Process.Start("https://github.com/jpmac26/showmiiwads");
             linkLabel1.LinkVisited = true;
         }
 
         private void lbDonate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8731272");
-            lbDonate.LinkVisited = true;
+			//System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8731272");
+			System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BVHNQ2DXNSZS4&lc=US&item_name=ShowMiiWads&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted");
+			lbDonate.LinkVisited = true;
         }
 
         private void About_Load(object sender, System.EventArgs e)
         {
-            if (x64 == true) lbPlatform.Text = "You're running the 64 bit Version";
+            if (Environment.Is64BitProcess) lbPlatform.Text = "You're running the 64 bit Version";
         }
     }
 }
