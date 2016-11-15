@@ -35,7 +35,7 @@ namespace ShowMiiWads
 	public partial class ShowMiiWads_Main : Form
 	{
 		//Define global variables
-		public const string version = "1.5";
+		public const string version = "Beta 1.5";
 		private string language = "English";
 		private string langfile = "";
 		private string oldlang = "";
